@@ -5,3 +5,20 @@ permalink: /posts/
 ---
 
 <h1>Welcome to my blog</h1>
+
+<div id="posts" class="post container">
+
+  {% for post in site.posts %}
+    <article class="post">
+      <h2>
+        {{ post.title | escape }}
+      </h2>
+
+      <p><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span> <strong>Author:</strong> {{ post.author }}</p>
+      <p>{{ post.exerpt }}</p>
+
+      <a href="{{ post.url | relative_url }}">READ MORE</a>  
+    </article>
+  {% endfor %}
+
+</div>
