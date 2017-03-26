@@ -1,0 +1,43 @@
+@keyframes slide-down {
+  0% {
+    top: -20px; opacity: 0;
+  }
+
+  100% {
+    top: 1px; opacity: 1;
+  }
+}
+
+.slide-down {
+  animation: slide-down 1.5s infinite;
+  overflow: hidden;
+}
+
+.slide-down-header {
+  animation: slide-down 1.5s linear;
+  overflow: hidden;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fade-in 1.5s linear;
+  overflow: hidden;
+}
+
+
+.animation-element {
+  visibility: hidden;
+}
+
+.animation-element.slide-down-header {
+  visibility: visible;
+}

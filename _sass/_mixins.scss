@@ -1,0 +1,66 @@
+@mixin transition($transition, $duration, $animation-type) {
+  -webkit-transition: $transition $duration $animation-type;
+  -o-transition: $transition $duration $animation-type;
+  transition: $transition $duration $animation-type;
+}
+
+@mixin filter($filter-type,$filter-amount) {
+  -webkit-filter: $filter-type+unquote('(#{$filter-amount})');
+  -moz-filter: $filter-type+unquote('(#{$filter-amount})');
+  -ms-filter: $filter-type+unquote('(#{$filter-amount})');
+  -o-filter: $filter-type+unquote('(#{$filter-amount})');
+  filter: $filter-type+unquote('(#{$filter-amount})');
+}
+
+@mixin transform($transform-type, $value) {
+  -webkit-transform: $transform-type+unquote('(#{$value})');
+  -moz-transform: $transform-type+unquote('(#{$value})');
+  -ms-transform: $transform-type+unquote('(#{$value})');
+  -o-transform: $transform-type+unquote('(#{$value})');
+  transform: $transform-type+unquote('(#{$value})');
+}
+
+@mixin center-vertically($x-value, $y-value) {
+  top: $x-value;
+  left: $x-value;
+  -webkit-transform: translate($y-value, $y-value);
+  -moz-transform: translate($y-value, $y-value);
+  -ms-transform: translate($y-value, $y-value);
+  -o-transform: translate($y-value, $y-value);
+  transform: translate($y-value, $y-value);
+}
+
+@mixin center-vert($top-value, $left-value, $x-value, $y-value) {
+  top: $top-value;
+  left: $left-value;
+  -webkit-transform: translate($x-value, $y-value);
+  -moz-transform: translate($x-value, $y-value);
+  -ms-transform: translate($x-value, $y-value);
+  -o-transform: translate($x-value, $y-value);
+  transform: translate($x-value, $y-value);
+}
+
+.center-vert {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.vert-height {
+  height: 100vh;
+  z-index: 2;
+}
+
+.descrHeadding {
+  padding-bottom: 40px;
+}
+
+.padding-left-right {
+  padding-left: 60px;
+  padding-right: 60px;
+}

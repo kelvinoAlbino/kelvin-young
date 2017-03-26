@@ -1,0 +1,345 @@
+main {
+  background-image: url('/assets/images/bg.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50%;
+  font-family: "arial";
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  font-weight: 100;
+  z-index: -9999;
+  margin-top: -53px;
+
+  &:after {
+    content:"";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+
+  #welcome {
+    z-index: 4;
+    position: relative;
+    @extend .vert-height;
+
+    h1 {
+      position: absolute;;
+      text-align: center;
+      font-size: 121px;
+      @include center-vert(60%, 50%, -50%, -50%);
+      color: $site-color;
+
+      .slide-down-container {
+        background-color: rgba($site-color, 0.5);
+        padding: 12px 20px;
+        position: relative;
+        height: 60px;
+        display: inline-block;
+
+        a {
+          display: inline-block;
+          position: relative;
+          top: -85px;
+
+          i {
+            font-size: 32px;
+            color: #fff;
+            position: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  #about-me {
+    clear: right;
+    padding-bottom: 180px;
+    z-index: 4;
+    font-size: 80px;
+    position: relative;
+
+    .descr {
+      width: 100%;
+
+      h2 {
+        font-size: 82px;
+        text-align: center;
+        color: $site-color !important;
+        @extend .descrHeadding;
+        padding-top: 120px;
+      }
+
+      p {
+        text-align: center;
+        color: $site-color !important;
+        @extend .padding-left-right;
+      }
+    }
+  }
+
+  #what-i-do {
+    bottom: 20px;
+    z-index: 4;
+    font-size: 80px;
+    position: relative;
+
+    .descr {
+      width: 100%;
+      background: rgba($site-color, 0.85);
+      padding: 60px 0 0;
+      color: #fff;
+
+      h4{
+        font-size: 26px;
+        padding: 20px 0px 30px;
+      }
+
+      .top {
+        margin-top: 60px;
+        padding-top: 20px;
+        background-color: rgba(0, 0, 0, 0.3);
+        border-radius: 5px;
+        border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+      }
+
+      blockquote {
+        text-align: left;
+
+        h5 {
+          text-align: left;
+          padding-top: 0px;
+          padding-bottom: 10px;
+        }
+
+        p {
+          text-align: left !important;
+          padding: 0px;
+        }
+      }
+
+      h2 {
+        font-size: 82px;
+        text-align: center;
+        @extend .descrHeadding;
+      }
+
+      p {
+        text-align: center;
+        @extend .padding-left-right;
+      }
+    }
+  }
+
+  #my-portfolio {
+    bottom: 20px;
+    z-index: 4;
+    font-size: 80px;
+    position: relative;
+
+    .descr {
+      width: 100%;
+
+      h2 {
+        font-size: 82px;
+        text-align: center;
+        color: $site-color !important;
+        padding-top: 80px;
+        @extend .descrHeadding;
+      }
+
+      p {
+        text-align: center;
+        color: $site-color !important;
+        @extend .padding-left-right;
+        margin-bottom: 40px;
+      }
+
+      .porti {
+        overflow: hidden;
+        max-height: 300px;
+        max-width: 300px;
+        padding: 0;
+        margin: 0 auto;
+
+        .porti-descr {
+
+          h3 {
+            padding-bottom: 10px;
+          }
+        }
+
+        &:hover{
+        }
+
+        a {
+
+          img {
+            position: relative;
+            overflow: hidden;
+            transition: transform, background-color, .5s linear;
+            margin: 0 auto !important;
+          }
+
+          &:hover {
+
+            .porti-descr {
+              opacity: 1;
+            }
+
+            &:after {
+              content:"";
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              z-index: 1;
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            img {
+              transform: scale(1.2) rotate(-5deg);
+            }
+          }
+
+          .porti-descr {
+            position: absolute;
+            z-index: 5;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            opacity: 0;
+            padding: 5px;
+
+
+            h3, p {
+              text-align: center;
+              color: #fff !important;
+              z-index:  9999;
+            }
+
+            h3 {
+              font-size: 60px;
+              text-shadow: 2px 2px 2px black;
+            }
+
+            p {
+              margin-bottom: 0px;
+              text-shadow: 2px 2px 2px black;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #contact-me {
+    bottom: 20px;
+    z-index: 4;
+    font-size: 80px;
+    position: relative;
+    display: block;
+    min-height: 700px;
+
+    .descr {
+      @extend .center-vert;
+      width: 100%;
+
+      form {
+        p {
+          input, textarea {
+            padding: 12px 16px;
+            color: #fff;
+            background-color: rgba($site-color, 0.8);
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            border-bottom: solid 2px rgba(255, 255, 255, 0.5);
+          }
+
+          textarea {
+            height: 250px;
+          }
+
+          input[type="submit"] {
+            display: inline-block;
+            float: right;
+            width: 100px;
+            transition: all 0.25s linear;
+
+            &:hover {
+              padding: 12px 16px;
+              background-color: transparent;
+              border: solid 2px $site-color;
+              color: $site-color;
+            }
+          }
+        }
+      }
+
+      h2 {
+        font-size: 82px;
+        text-align: center;
+        color: $site-color !important;
+        @extend .descrHeadding;
+      }
+
+      p {
+        //text-align: center;
+        color: $site-color !important;
+        @extend .padding-left-right;
+
+        a {
+
+          i.fa {
+            color: $site-color;
+            text-align: center;
+            font-size: 30px;
+            width: 50px;
+            height: 50px;
+            padding-top: 8px;
+            border: solid 3px $site-color;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+
+            &:hover {
+              opacity: 0.3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+
+  main {
+    margin-top: -262px;
+
+    #welcome {
+      h1 {
+        margin-top: 120px;
+      }
+    }
+
+    #about-me {
+      .descr {
+        h2 {
+          padding-top: 120px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $screen-sm) {
+  #welcome {
+    margin-top: 150px;
+  }
+}

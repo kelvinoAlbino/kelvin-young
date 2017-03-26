@@ -1,0 +1,190 @@
+ main {
+   #skills {
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 20px 0;
+
+      .c100 {
+        position: relative;
+        font-size: 90px;
+        width: 1em;
+        height: 1em;
+        border-radius: 50%;
+        margin: 0 0.1em 0.1em 0;
+        background-color: rgba($site-color, 0.6);
+        box-shadow: $shadow;
+
+        &:before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          clip: rect(0, 1em, 1em, 0.5em);
+        }
+
+        span {
+          position: absolute;
+          width: 100%;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 5em;
+          line-height: 5em;
+          font-size: 0.2em;
+          color: #cccccc;
+          display: block;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .slice {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          background-color: green;
+          clip: rect(0, 1em, 1em, 0.5em);
+        }
+
+        .fill {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          background-color: $site-color;
+          width: 85%;
+          height: 85%;
+          border-radius: 50%;
+          transform: translate(-50%, -50%);
+          box-shadow: $shadow;
+        }
+
+        &.ai:before {
+          background-color: $illustrator;
+          transform: rotate(160deg);
+        }
+
+
+        &.ai {
+          span {
+            color: $illustrator;
+          }
+
+           .slice {
+            background-color: $illustrator;
+          }
+        }
+
+        &.id:before {
+          background-color: $indesign;
+          transform: rotate(170deg);
+        }
+
+        &.id {
+          span {
+            color: $indesign;
+          }
+
+           .slice {
+            background-color: $indesign;
+          }
+        }
+
+        &.ps:before {
+          background-color: $photoshop;
+          transform: rotate(160deg);
+        }
+
+        &.ps {
+          span {
+            color: $photoshop;
+          }
+          .slice {
+            background-color: $photoshop;
+          }
+        }
+
+        &.html:before {
+          background-color: $html;
+          transform: rotate(120deg);
+        }
+
+        &.html {
+          span {
+            color: $html;
+          }
+
+          .slice {
+            background-color: $html;
+          }
+        }
+
+        &.css:before {
+          background-color: $css;
+          transform: rotate(120deg);
+        }
+
+        &.css {
+          span {
+            color: $css;
+          }
+
+          .slice {
+            background-color: $css;
+          }
+        }
+
+        &.js:before {
+          background-color: $js;
+          transform: rotate(80deg);
+        }
+
+        &.js {
+          span {
+            color: $js;
+          }
+
+          .slice {
+            background-color: $js;
+          }
+        }
+
+        &.php:before {
+          background-color: $php;
+          transform: rotate(30deg);
+        }
+
+        &.php {
+          span {
+            color: $php;
+          }
+
+          .slice {
+            background-color: $php;
+          }
+        }
+
+        &.wp:before {
+          background-color: $wp;
+          transform: rotate(120deg);
+        }
+
+        &.wp {
+          span {
+            color: $wp;
+          }
+
+          .slice {
+            background-color: $wp;
+          }
+        }
+      }
+    }
+  }
+}

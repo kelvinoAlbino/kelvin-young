@@ -1,0 +1,17 @@
+footer {
+  text-align: center;
+  position: relative;
+  z-index: 4;
+
+  .col-md-12 {
+    background-color: #23282d !important;
+    color: #fff;
+    padding: 20px 0px;
+  }
+
+  #copywrites {
+    background-color: #23282d;
+    color: #fff;
+    padding: 20px 0px;
+  }
+}
