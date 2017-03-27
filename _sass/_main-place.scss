@@ -245,6 +245,20 @@ main {
     position: relative;
     display: block;
     min-height: 700px;
+    
+    a.email {
+      display: block;
+      font-family: courier, sans-serif;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.7);
+      text-align: center;
+
+      span {
+        background: rgba($site-color, 0.8);
+        padding: 8px 12px;
+        border-radius:  5px;
+      }
+    }
 
     .descr {
       @extend .center-vert;
@@ -290,12 +304,11 @@ main {
       }
 
       p {
-        //text-align: center;
+        text-align: center;
         color: $site-color !important;
         @extend .padding-left-right;
 
         a {
-
           i.fa {
             color: $site-color;
             text-align: center;
@@ -306,6 +319,7 @@ main {
             border: solid 3px $site-color;
             border-radius: 50%;
             transition: all 0.3s ease;
+            display: inline-block;
 
             &:hover {
               opacity: 0.3;
